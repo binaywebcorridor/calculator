@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var displayNumber: UILabel!
     
     var userIsInTheMiddleOfType = false
-    //@IBOutlet weak var digitNumber: UIButton!
+    
     @IBAction func digitNumber(sender: UIButton)
     {
         let myNumber = sender.currentTitle!
