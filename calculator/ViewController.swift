@@ -20,6 +20,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBOutlet weak var displayNumber: UILabel!
+    
+    var userIsInTheMiddleOfType = false
+    //@IBOutlet weak var digitNumber: UIButton!
+    @IBAction func digitNumber(sender: UIButton)
+    {
+        let myNumber = sender.currentTitle!
+        if( userIsInTheMiddleOfType)
+        {
+            displayNumber.text =  displayNumber.text! + myNumber
 
+        }else{
+            displayNumber.text =  myNumber
+        }
+        userIsInTheMiddleOfType = true
+        
+    }
+    
+    @IBAction func pi(sender: UIButton) {
+        userIsInTheMiddleOfType = false
+        
+        if let piNumber = sender.currentTitle
+        {
+            if piNumber == "π"
+                {
+                    displayNumber.text = String(M_PI)
+
+            }
+        }
+    }
 }
 
